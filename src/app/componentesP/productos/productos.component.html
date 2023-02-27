@@ -1,0 +1,40 @@
+<app-header></app-header>
+
+<div class="container container-md-fluid">
+  <div class="row ">
+      <div class="col-auto col-md-10  ">
+          <nav aria-label="breadcrumb " class="first   d-md-flex bg-violet" >
+              <ol class="breadcrumb indigo lighten-6 first-1 shadow-lg mb-5  ">
+                  <li class="breadcrumb-item font-weight-bold"><a class="black-text text-uppercase" routerLink="/home"><span  >home</span></a><img class="ml-md-3" src="https://img.icons8.com/offices/100/000000/double-right.png" width="20" height="20"> </li>
+
+
+              </ol>
+          </nav>
+      </div>
+  </div>
+</div>
+
+
+<div class="row">
+    
+<div class="col-sm-3"  *ngFor="let tarjeta of ArregloTarjetas">
+
+<div class="container text-center"
+>
+  <img class="image"[src]="tarjeta.image">
+  <div class="wrapper-text">
+      <div class="title">{{tarjeta.titulo}}</div>
+      <div class="sub-title">{{tarjeta.Descripcion}}</div>
+  </div>
+  <div>
+      <button class="btn btn-primary" (click)="AgregarAFavorito()">Añadir a Favoritos</button>
+  </div>
+</div>
+
+</div>
+
+
+
+
+
+<app-footer></app-footer>

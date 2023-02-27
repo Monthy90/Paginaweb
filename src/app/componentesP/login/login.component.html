@@ -1,0 +1,77 @@
+
+<app-header></app-header>
+
+
+<div class="container">
+
+    <div class="container container-md-fluid">
+      <div class="row ">
+          <div class="col-auto col-md-10  ">
+              <nav aria-label="breadcrumb " class="first   d-md-flex bg-violet" >
+                  <ol class="breadcrumb indigo lighten-6 first-1 shadow-lg mb-5  ">
+                      <li class="breadcrumb-item font-weight-bold"><a class="black-text text-uppercase" routerLink="/home"><span  >HOME</span></a><img class="ml-md-3" src="https://img.icons8.com/offices/100/000000/double-right.png" width="20" height="20"> </li>
+                      <li class="breadcrumb-item font-weight-bold"><a class="black-text text-uppercase" routerLink="/crearc"><span >LOGIN</span></a><img class="ml-md-3" src="https://img.icons8.com/offices/100/000000/double-right.png" width="20" height="20"></li>
+                      <li class="breadcrumb-item font-weight-bold mr-0 pr-0"><a class="black-text active-1" routerLink="/crearc"><span >INICIAR SESION</span></a> </li>
+                  </ol>
+              </nav>
+          </div>
+      </div>
+  </div>
+  
+  
+    <div class="signupFrm">
+      <form (ngSubmit)="onSubmit()" [formGroup]="logForm"class="form">
+   
+        <h1 class="title">INICIAR SESION</h1>
+   <div class="inputContainer">
+          <input type="text" class="input"id="email" name="email"  placeholder="" required formControlName="email">
+          <label for="" class="label">EMAIL</label>
+          <div 
+          class="alert alert-"*ngIf="camponovalido('email')">Ingrese un emial.</div>
+        </div>
+   
+        <div class="inputContainer">
+          <input type="password" class="input" id="password" name="password"  placeholder="a" required formControlName="password">
+          <label for="" class="label">CONTRASEÑA</label>
+          <div 
+          class="alert alert-"*ngIf="camponovalido('password')">Ingrese una contraseña.</div>
+  
+        </div>
+        <br>
+        <a routerLink="/avisodpriv">¿Olvidaste tu contraseña?</a>
+        <br>
+        <a routerLink="/iniciar-sesion">CREAR UNA CUENTA </a>
+        <br>
+        <br>
+       <div align="right">
+              <button type="submit" class="btn btn-info">ENTRAR</button>  
+       </div>
+  
+  
+       
+       
+        <br>
+        
+        
+       
+       
+      
+      </form>
+    </div>
+         
+  
+    
+        
+                
+      
+    
+      
+  <br>
+  
+  </div>
+  
+
+
+
+
+<app-footer></app-footer>
